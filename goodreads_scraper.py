@@ -107,10 +107,9 @@ if __name__ == "__main__":
     # the end of the scraping process.
     try:
         n_write_files = int(sys.argv[3])
+        book_ranges = np.arange(start, end, n_write_files)
     except:
-        n_write_files = (end-start)//10
-
-    book_ranges = np.arange(start, end, n_write_files)
+        book_ranges = [start,end]
 
     for start, end in zip(book_ranges[:-1], book_ranges[1:]):
         scrape_goodreads(start, end)

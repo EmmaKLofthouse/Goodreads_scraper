@@ -6,8 +6,9 @@ temp/
 
 # ignore all data files
 json_files/
-old_json_files
+old_json_files/
 *.json
 
-#ignore any test files
+#ignore any test or backup files
 test*
+backup*
