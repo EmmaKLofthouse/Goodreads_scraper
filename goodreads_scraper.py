@@ -16,8 +16,8 @@ def make_request(url):
 def scrape_book(bookID):
     page_url = f"https://www.goodreads.com/book/show/{bookID}"
 
-    #if bookID % 100 == 0:
-    #    print(f"Scraping book {bookID}")
+    if bookID % 100 == 0:
+        print(f"Scraping book {bookID}")
 
     try:
         response = make_request(page_url)
@@ -49,9 +49,9 @@ def scrape_book(bookID):
             # Extract publication date from the webpage
             publication_date = extract_publication_date(soup)
 
-
             # Store the extracted data in a dictionary
             extracted_data = {
+                'Book ID': bookID,
                 'Title': title,
                 'Number of Pages': number_of_pages,
                 'Language': language,

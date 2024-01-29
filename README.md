@@ -34,9 +34,9 @@ Each book on the goodreads website is found at a separate address given by:
     www.goodreads.com/book/show/{bookID}
 
 The scraper works by looping through successive bookIDs from the given 
-<start> value and ending when it reaches the given <end value>. 
+ &lt;start&gt; value and ending when it reaches the given  &lt;end&gt; value. 
 
-In addition, you can provide an optional <n_per_file> value. This determines 
+In addition, you can provide an optional  &lt;n_per_file&gt; value. This determines 
 the number of books per output file. 
 
 ### Output
@@ -51,7 +51,8 @@ i = bookID of the first book
 
 j = bookID of the last book
 
-If a value for <n_per_file> is provided the code will output this many books 
+If a value for &lt;n_per_file&gt; is provided the code will output this many 
+books 
 per JSON file. This is used to ensure that, in the event of the 
 scraper being interrupted, not all of the data is lost. 
 The resulting files can then be combined into a single file by running 
@@ -59,7 +60,7 @@ The resulting files can then be combined into a single file by running
 python3 combine_json.py
 ```
 
-Alternatively, if <n_per_file> is not provided, the code will output a 
+Alternatively, if &lt;n_per_file&gt; is not provided, the code will output a 
 single file of the form extracted_data_{start}_{end}.json. 
 
 ### Data Schema 
